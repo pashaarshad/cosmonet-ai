@@ -1,37 +1,44 @@
-import { jobOpenings } from '../../data/siteData';
-import { FiMapPin, FiArrowRight } from 'react-icons/fi';
+import { FiMapPin } from 'react-icons/fi';
 import './Careers.css';
+
+const jobs = [
+  { title: "Senior AI Engineer (LLM & GenAI)", type: "Full-Time", location: "San Francisco / Remote" },
+  { title: "Machine Learning Solutions Architect", type: "Full-Time", location: "Remote" },
+  { title: "Enterprise Database Engineer", type: "Full-Time", location: "New York / Remote" }
+];
 
 export default function Careers() {
   return (
     <section id="careers" className="careers section-padding">
       <div className="container">
+        <span className="section-label">Careers</span>
+        <h2 className="section-heading careers__title" data-aos="fade-up">
+          Build the Future with Cosmonet AI
+        </h2>
+
         <div className="careers__layout">
-          <div className="careers__text" data-aos="fade-up">
-            <span className="section-label">Join Our Team</span>
-            <h2 className="section-heading careers__title">
-              Build the <span className="accent-teal">Future</span> with Cosmonet AI
-            </h2>
-            <p className="section-body">
-              We are always looking for curious minds, innovative thinkers, and passionate engineers
-              to join our growing team. Join us and help shape the future of AI-powered technology.
+          <div className="careers__content" data-aos="fade-right">
+            <p className="section-body" style={{ fontSize: '1.2rem' }}>
+              We are always looking for curious minds, innovative thinkers, and passionate engineers to join our growing team. 
+              Join us and help shape the future of AI-powered technology.
             </p>
-            <a href="#contact" className="btn btn-primary careers__cta">
-              View Open Positions <FiArrowRight />
+            
+            <a href="#contact" className="btn btn-primary" style={{ marginTop: '32px' }}>
+              View Open Positions
             </a>
           </div>
 
-          <div className="careers__jobs" data-aos="fade-up" data-aos-delay="150">
-            {jobOpenings.map((job, i) => (
-              <div key={i} className="job-card">
-                <div className="job-card__info">
+          <div className="careers__jobs" data-aos="fade-left">
+            {jobs.map((job, i) => (
+              <div className="job-card" key={i}>
+                <div>
                   <h3 className="job-card__title">{job.title}</h3>
                   <div className="job-card__meta">
                     <span className="job-card__location"><FiMapPin /> {job.location}</span>
                     <span className="job-card__type">{job.type}</span>
                   </div>
                 </div>
-                <a href="#contact" className="btn btn-outline job-card__apply">Apply Now</a>
+                <button className="job-card__apply">Apply Now</button>
               </div>
             ))}
           </div>
