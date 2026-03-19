@@ -1,9 +1,10 @@
-.about { background: var(--bg-white); }
+.about { background: var(--bg-dark); }
 .about__title {
   font-size: var(--text-4xl);
   max-width: 900px;
-  color: var(--text-dark);
+  color: var(--text-white);
 }
 .about__body {
   margin-top: var(--space-6);
+  color: var(--text-dark-body);
 }

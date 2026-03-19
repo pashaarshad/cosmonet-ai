@@ -81,7 +81,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <a href="#contact" className="btn btn-secondary navbar__cta">Get Started</a>
+        <a href="#contact" className="navbar__cta">Contact us</a>
 
         <button
           className="navbar__hamburger"

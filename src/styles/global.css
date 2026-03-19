@@ -217,7 +217,7 @@ input, textarea, select {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: var(--accent-orange);
+  background: var(--accent-teal);
   color: white;
   display: flex;
   align-items: center;
@@ -227,7 +227,7 @@ input, textarea, select {
   visibility: hidden;
   transition: all var(--transition-base);
   z-index: 999;
-  box-shadow: 0 4px 16px rgba(232, 98, 43, 0.3);
+  box-shadow: var(--glow-teal);
 }
 
 .scroll-top-btn.visible {
@@ -237,7 +237,7 @@ input, textarea, select {
 
 .scroll-top-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(232, 98, 43, 0.4);
+  box-shadow: 0 0 30px rgba(26, 155, 158, 0.5);
 }
 
 /* ── AOS Override ── */
@@ -251,14 +251,14 @@ input, textarea, select {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-gray);
+  background: var(--bg-darkest);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: var(--accent-teal);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: var(--accent-teal-hover);
 }

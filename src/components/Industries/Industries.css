@@ -1,65 +1,55 @@
-.industries { background: var(--bg-white); }
-.industries__title { font-size: var(--text-4xl); color: var(--text-dark); }
-
+.industries { background: var(--bg-dark); }
+.industries__title { font-size: var(--text-4xl); color: var(--text-white); }
 .industries__grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: var(--space-5);
   margin: var(--space-12) 0;
 }
-
 .industry-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-4);
   padding: var(--space-8) var(--space-4);
-  background: var(--bg-gray);
+  background: var(--card-dark);
   border-radius: var(--radius-lg);
-  border: 1px solid #E2E8F0;
+  border: 1px solid rgba(255,255,255,0.04);
   transition: all var(--transition-base);
   text-align: center;
 }
-
 .industry-card:hover {
   transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-teal);
-  background: var(--bg-white);
+  border-color: var(--accent-orange);
+  box-shadow: var(--glow-orange);
 }
-
 .industry-card__icon {
   width: 56px; height: 56px;
   border-radius: 50%;
-  background: var(--bg-white);
-  color: var(--text-dark);
+  background: var(--accent-teal-light);
+  color: var(--accent-teal);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   transition: all var(--transition-base);
-  border: 1px solid #E2E8F0;
 }
-
 .industry-card:hover .industry-card__icon {
-  background: var(--accent-teal);
+  background: var(--accent-orange);
   color: white;
-  border-color: var(--accent-teal);
+  box-shadow: var(--glow-orange);
 }
-
 .industry-card__name {
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-light);
 }
-
 .industries__footer {
   font-size: var(--text-base);
   color: var(--text-dark-body);
   line-height: 1.75;
   max-width: 800px;
 }
-
 @media (max-width: 1024px) { .industries__grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 480px) { .industries__grid { grid-template-columns: repeat(2, 1fr); } }

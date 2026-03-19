@@ -1,58 +1,50 @@
-.careers { background: var(--bg-white); }
-.careers__title { font-size: var(--text-4xl); color: var(--text-dark); }
+.careers { background: var(--bg-dark); }
+.careers__title { font-size: var(--text-4xl); color: var(--text-white); }
 .careers__cta { margin-top: var(--space-8); }
-
 .careers__layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-16);
   align-items: start;
 }
-
 .careers__jobs {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
-
 .job-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--space-6);
-  background: var(--bg-white);
-  border: 1px solid #E2E8F0;
+  background: var(--card-dark);
+  border: 1px solid rgba(255,255,255,0.04);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
 }
-
 .job-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--accent-teal);
+  box-shadow: var(--glow-teal);
+  border-color: rgba(26, 155, 158, 0.3);
 }
-
 .job-card__title {
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-white);
   margin-bottom: var(--space-2);
 }
-
 .job-card__meta {
   display: flex;
   align-items: center;
   gap: var(--space-4);
 }
-
 .job-card__location {
   display: flex;
   align-items: center;
   gap: var(--space-1);
   font-size: var(--text-xs);
-  color: var(--text-dark-muted);
+  color: var(--text-muted);
 }
-
 .job-card__type {
   font-size: var(--text-xs);
   color: var(--accent-teal);
@@ -61,21 +53,20 @@
   border-radius: var(--radius-full);
   font-weight: 500;
 }
-
 .job-card__apply {
   font-size: var(--text-xs);
   padding: 8px 20px;
   white-space: nowrap;
-  color: var(--text-dark);
-  border-color: #CBD5E1;
+  color: var(--text-white);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-sm);
+  background: transparent;
 }
-
 .job-card__apply:hover {
-  background: var(--text-dark);
+  background: var(--accent-teal);
   color: white;
-  border-color: var(--text-dark);
+  border-color: var(--accent-teal);
 }
-
 @media (max-width: 768px) {
   .careers__layout { grid-template-columns: 1fr; }
   .job-card { flex-direction: column; align-items: flex-start; gap: var(--space-4); }

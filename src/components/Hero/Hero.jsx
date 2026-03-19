@@ -1,44 +1,33 @@
-import heroIllustration from '../../assets/hero-illustration.png';
+import heroImage from '../../assets/hero-v6.png';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section id="hero" className="hero">
-      <div className="hero__bg-effects">
-        <div className="hero__code-overlay"></div>
+      {/* Background AI face image */}
+      <div className="hero__bg">
+        <img src={heroImage} alt="" className="hero__bg-image" aria-hidden="true" />
+        <div className="hero__bg-overlay"></div>
+        <div className="hero__bg-particles"></div>
       </div>
 
       <div className="hero__content container">
         <div className="hero__text">
           <h1 className="hero__title">
-            Engineering the{' '}
-            <span className="accent-white">Future</span> with{' '}
-            <span className="accent-white">AI</span>
+            Engineering the Future with AI
           </h1>
-          <p className="hero__subtitle">Fostering Innovation and Creativity</p>
-          <p className="hero__desc">
-            Cosmonet AI stands at the forefront of Artificial Intelligence Solutions,
-            delivering enterprise-grade Machine Learning, Custom Software Development,
-            and Generative AI solutions that transform businesses globally.
-          </p>
+          <p className="hero__subtitle">Your Data — Our Intelligent Technology</p>
           <div className="hero__ctas">
-            <a href="#contact" className="btn hero__btn-primary">
+            <a href="#contact" className="hero__btn-yellow">
               Let's discuss your project
             </a>
           </div>
         </div>
-
-        <div className="hero__visual">
-          <img
-            src={heroIllustration}
-            alt="AI technology team illustration"
-            className="hero__illustration"
-          />
-        </div>
       </div>
 
-      {/* News ticker strip at bottom */}
+      {/* News ticker strip */}
       <div className="hero__ticker">
+        <div className="hero__ticker-nav hero__ticker-nav--left">‹</div>
         <div className="hero__ticker-inner container">
           <div className="hero__ticker-item">
             <span className="hero__ticker-date">MAR 15, 2026</span>
@@ -53,6 +42,7 @@ export default function Hero() {
             <span className="hero__ticker-title">The CTO's Guide to Intelligent Automation</span>
           </div>
         </div>
+        <div className="hero__ticker-nav hero__ticker-nav--right">›</div>
       </div>
     </section>
   );

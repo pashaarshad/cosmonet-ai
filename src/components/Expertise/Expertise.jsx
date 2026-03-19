@@ -6,11 +6,11 @@ export default function Expertise() {
   return (
     <section id="expertise" className="expertise section-padding">
       <div className="container">
-        <span className="section-label section-label--dark">What's Our Expertise</span>
-        <h2 className="section-heading section-heading--dark expertise__title" data-aos="fade-up">
+        <span className="section-label">What's Our Expertise</span>
+        <h2 className="section-heading section-heading--light expertise__title" data-aos="fade-up">
           Core Technology <span className="accent-teal">Stack</span>
         </h2>
-        <p className="section-body section-body--dark" data-aos="fade-up" data-aos-delay="100">
+        <p className="section-body section-body--light" data-aos="fade-up" data-aos-delay="100">
           From Artificial Intelligence and Machine Learning solutions to cloud-native software development,
           our team transforms complex ideas into high-performance digital products. We bridge the gap between
           visionary concepts and production-ready reality through deep technical expertise.
