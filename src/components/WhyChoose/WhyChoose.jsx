@@ -8,8 +8,8 @@ export default function WhyChoose() {
   return (
     <section id="why-us" className="why-choose section-padding">
       <div className="container">
-        <span className="section-label section-label--dark">Why Choose Cosmonet AI</span>
-        <h2 className="section-heading section-heading--dark why-choose__title" data-aos="fade-up">
+        <span className="section-label">Why Choose Cosmonet AI</span>
+        <h2 className="section-heading why-choose__title" data-aos="fade-up">
           Technology Expertise That Drives <span className="accent-teal">Real Results</span>
         </h2>
         <div className="why-choose__grid">

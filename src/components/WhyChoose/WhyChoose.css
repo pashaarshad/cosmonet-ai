@@ -1,56 +1,70 @@
-/* WhyChoose — DARK section */
-.why-choose { background: var(--bg-dark); }
-.why-choose .section-label { color: var(--accent-teal); }
-.why-choose .section-heading { color: #FFFFFF; }
+/* ──────────────── WHY CHOOSE (V7 Light Clean Lines) ──────────────── */
+.why-choose {
+  background: #FCFCFD; /* Very slight gray tint */
+  padding: var(--space-32) 0;
+  border-top: 1px solid rgba(0,0,0,0.02);
+  border-bottom: 1px solid rgba(0,0,0,0.02);
+}
+
+.why-choose__title {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
 
 .why-choose__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
-  margin-top: var(--space-12);
+  gap: var(--space-10);
+  margin-top: var(--space-16);
 }
+
 .why-card {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-5);
-  padding: var(--space-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(255,255,255,0.06);
-  background: rgba(255,255,255,0.04);
+  gap: var(--space-6);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  background: #FFFFFF;
+  border: 1px solid transparent;
   transition: all var(--transition-base);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.015);
 }
+
 .why-card:hover {
-  box-shadow: var(--glow-teal);
-  border-color: rgba(26, 155, 158, 0.3);
-  transform: translateY(-4px);
+  border-color: rgba(0,0,0,0.04);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  transform: translateY(-2px);
 }
+
 .why-card__icon {
-  width: 52px; height: 52px;
-  border-radius: var(--radius-md);
-  background: rgba(26, 155, 158, 0.12);
-  color: var(--accent-teal);
+  width: 48px; height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-deep); /* Dark square icon base */
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
+  font-size: 20px;
   flex-shrink: 0;
-  transition: all var(--transition-base);
 }
-.why-card:hover .why-card__icon {
-  background: var(--accent-teal);
-  color: white;
-  box-shadow: var(--glow-teal);
-}
+
 .why-card__title {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
+  font-size: 22px;
   font-weight: 700;
-  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
   margin-bottom: var(--space-2);
 }
+
 .why-card__desc {
-  font-size: var(--text-sm);
-  color: #A0AFC5;
-  line-height: 1.65;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
-@media (max-width: 768px) { .why-choose__grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 768px) {
+  .why-choose__grid { grid-template-columns: 1fr; }
+  .why-card { padding: var(--space-6); }
+}

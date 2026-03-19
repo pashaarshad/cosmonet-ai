@@ -9,11 +9,11 @@ export default function Partnership() {
       <div className="container">
         <div className="partnership__layout">
           <div className="partnership__content" data-aos="fade-up">
-            <span className="section-label section-label--dark">Partnerships</span>
-            <h2 className="section-heading section-heading--dark partnership__title">
+            <span className="section-label">Partnerships</span>
+            <h2 className="section-heading partnership__title">
               Partnering with <span className="accent-orange">Cosmonet AI</span>
             </h2>
-            <p className="section-body section-body--dark">
+            <p className="section-body">
               Your Strategic AI & Technology Partner. Partnering with Cosmonet AI means gaining access to
               deep technical expertise in Generative AI Development and a collaborative innovation ecosystem.
             </p>

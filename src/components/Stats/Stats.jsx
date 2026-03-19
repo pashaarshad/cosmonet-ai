@@ -16,8 +16,8 @@ export default function Stats() {
   return (
     <section id="stats" className="stats section-padding">
       <div className="container">
-        <span className="section-label section-label--dark">Our Impact</span>
-        <h2 className="section-heading section-heading--dark stats__title" data-aos="fade-up">
+        <span className="section-label">Our Impact</span>
+        <h2 className="section-heading stats__title" data-aos="fade-up">
           Successfully Working With
         </h2>
         <div className="stats__grid">

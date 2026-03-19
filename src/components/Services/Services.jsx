@@ -18,11 +18,11 @@ export default function Services() {
     <section id="services" className="services section-padding">
       <div className="container">
         <div className="services__header" data-aos="fade-up">
-          <span className="section-label section-label--dark">What We Do</span>
-          <h2 className="section-heading section-heading--dark services__title">
+          <span className="section-label">What We Do</span>
+          <h2 className="section-heading services__title">
             Our <span className="accent-teal">Services</span>
           </h2>
-          <p className="section-body section-body--dark">
+          <p className="section-body">
             Empower your business with Artificial Intelligence Solutions from a leading AI Development Company
             delivering AI Product Development and Machine Learning Solutions. We bring together Custom Software
             Development, Generative AI Development, and Enterprise AI Solutions to create smart, scalable systems.

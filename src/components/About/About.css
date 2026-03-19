@@ -1,19 +1,26 @@
-/* About — WHITE section */
+/* ──────────────── ABOUT (V7 Premium Clean) ──────────────── */
 .about {
-  background: #FFFFFF;
-}
-.about__title {
-  font-size: var(--text-4xl);
-  max-width: 900px;
-  color: #0F172A;
-}
-.about__body {
-  margin-top: var(--space-6);
-  color: #475569;
+  background: var(--bg-white);
+  padding: var(--space-32) 0 var(--space-20);
+  border-bottom: 1px solid var(--border-light);
 }
 
-/* Override section labels/headings for white bg */
-.about .section-label { color: var(--accent-teal); }
-.about .section-label::before { background: var(--accent-teal); }
-.about .section-heading { color: #0F172A; }
-.about .section-body { color: #475569; }
+.about__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+  max-width: 900px;
+  line-height: 1.1;
+  margin-top: var(--space-4);
+}
+
+.about__body {
+  font-size: var(--text-xl);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-top: var(--space-8);
+  font-weight: 400;
+}

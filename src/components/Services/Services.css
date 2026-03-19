@@ -1,79 +1,106 @@
-/* Services — DARK section */
-.services { background: var(--bg-dark); }
-.services .section-label { color: var(--accent-teal); }
-.services .section-heading { color: #FFFFFF; }
-.services .section-body { color: #A0AFC5; }
+/* ──────────────── SERVICES (V7 Premium Dark Glass) ──────────────── */
+.services {
+  background: var(--bg-dark); /* Obsidian */
+  padding: var(--space-32) 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: -10vw; left: 50%;
+  transform: translateX(-50%);
+  width: 80vw; height: 30vw;
+  background: radial-gradient(ellipse at center, rgba(22, 163, 166, 0.15), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services .container { position: relative; z-index: 1; }
+
+.services__title {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  color: #FFFFFF;
+}
 
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 up large bento cards */
   gap: var(--space-6);
-  margin-top: var(--space-12);
+  margin-top: var(--space-16);
 }
+
 .service-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8) var(--space-6);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(20px);
 }
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 3px;
-  background: linear-gradient(90deg, var(--accent-teal), var(--accent-orange));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-base);
-}
+
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 32px rgba(26, 155, 158, 0.15);
-  border-color: rgba(26, 155, 158, 0.2);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
 }
-.service-card:hover::before { transform: scaleX(1); }
+
 .service-card__icon {
   width: 48px; height: 48px;
-  border-radius: var(--radius-md);
-  background: rgba(26, 155, 158, 0.12);
-  color: var(--accent-teal);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-6);
   transition: all var(--transition-base);
 }
+
 .service-card:hover .service-card__icon {
-  background: var(--accent-teal);
-  color: white;
-  box-shadow: var(--glow-teal);
+  background: var(--text-white);
+  color: var(--bg-dark);
 }
+
 .service-card__title {
   font-family: var(--font-heading);
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
   font-weight: 700;
+  letter-spacing: -0.02em;
   color: #FFFFFF;
   margin-bottom: var(--space-3);
 }
+
 .service-card__desc {
-  font-size: var(--text-sm);
-  color: #A0AFC5;
-  line-height: 1.65;
-  margin-bottom: var(--space-5);
+  font-size: 15px;
+  color: #94A3B8;
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
 }
+
 .service-card__link {
-  font-size: var(--text-sm);
+  font-size: 14px;
   font-weight: 600;
-  color: var(--accent-teal);
+  color: #FFFFFF;
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   transition: gap var(--transition-fast);
+  opacity: 0.8;
 }
-.service-card__link:hover { gap: var(--space-3); }
-@media (max-width: 1024px) { .services__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .services__grid { grid-template-columns: 1fr; } }
+
+.service-card__link:hover { gap: var(--space-4); opacity: 1; }
+
+@media (max-width: 768px) {
+  .services__grid { grid-template-columns: 1fr; }
+  .service-card { padding: var(--space-8); }
+}

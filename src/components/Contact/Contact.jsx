@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="contact__header" data-aos="fade-up">
           <span className="section-label" style={{ justifyContent: 'center' }}>Get in Touch</span>
           <h2 className="contact__main-title">Contact Us</h2>
-          <p className="section-body section-body--light contact__subtitle">
+          <p className="section-body contact__subtitle">
             Ready to transform your business with AI? Let's start a conversation.
           </p>
         </div>

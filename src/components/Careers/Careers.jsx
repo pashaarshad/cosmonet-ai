@@ -8,11 +8,11 @@ export default function Careers() {
       <div className="container">
         <div className="careers__layout">
           <div className="careers__text" data-aos="fade-up">
-            <span className="section-label section-label--dark">Join Our Team</span>
-            <h2 className="section-heading section-heading--dark careers__title">
+            <span className="section-label">Join Our Team</span>
+            <h2 className="section-heading careers__title">
               Build the <span className="accent-teal">Future</span> with Cosmonet AI
             </h2>
-            <p className="section-body section-body--dark">
+            <p className="section-body">
               We are always looking for curious minds, innovative thinkers, and passionate engineers
               to join our growing team. Join us and help shape the future of AI-powered technology.
             </p>

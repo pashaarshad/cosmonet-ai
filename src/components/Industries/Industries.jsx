@@ -11,11 +11,11 @@ export default function Industries() {
   return (
     <section id="industries" className="industries section-padding">
       <div className="container">
-        <span className="section-label section-label--dark">Industries We Serve</span>
-        <h2 className="section-heading section-heading--dark industries__title" data-aos="fade-up">
+        <span className="section-label">Industries We Serve</span>
+        <h2 className="section-heading industries__title" data-aos="fade-up">
           Driving <span className="accent-teal">Innovation</span> Across Sectors
         </h2>
-        <p className="section-body section-body--dark" data-aos="fade-up" data-aos-delay="100">
+        <p className="section-body" data-aos="fade-up" data-aos-delay="100">
           From fintech enterprises leveraging AI for real-time fraud detection, to healthcare providers deploying
           machine learning for predictive patient outcomes, Cosmonet AI delivers both the strategic vision and
           advanced technical execution required to succeed.

@@ -1,93 +1,84 @@
 /* ============================================
-   COSMONET AI — V6 Dark Futuristic Theme
-   Deep Navy / Teal Glow / Orange Accents
+   COSMONET AI — V7 "Premium Obsidian & Ivory"
+   Crafted for a high-end, human-designed feel
    ============================================ */
 
 :root {
-  /* ── Primary Backgrounds ── */
-  --bg-dark:        #0A0E27;
-  --bg-dark-alt:    #0F1535;
-  --bg-darkest:     #060919;
-  --bg-light:       #0D1230;
-  --bg-white:       #0F1535;
-  --bg-gray:        #111842;
-  --bg-gray-warm:   #141B4A;
+  /* ── Core Backgrounds ── */
+  --bg-deep:        #050812; /* Nearly black, hint of navy */
+  --bg-dark:        #0C1222; /* Sleek obsidian */
+  --bg-darker:      #090D18;
+  --bg-white:       #FFFFFF;
+  --bg-offwhite:    #F8FAFC;
+  --bg-gray:        #F1F5F9;
 
-  /* ── Card Backgrounds ── */
-  --card-dark:      rgba(255, 255, 255, 0.04);
-  --card-dark-hover:rgba(255, 255, 255, 0.07);
-  --card-light:     rgba(255, 255, 255, 0.03);
+  /* ── Interactive & Card Backgrounds ── */
+  --card-dark:      rgba(255, 255, 255, 0.03);
+  --card-dark-hover:rgba(255, 255, 255, 0.05);
+  --card-dark-solid:#131B2F;
+  --card-light:     #FFFFFF;
+  --card-light-hover: #F8FAFC;
 
-  /* ── Brand Accent Colors (from logo) ── */
-  --accent-teal:    #1A9B9E;
-  --accent-teal-hover: #22B5B8;
-  --accent-teal-light: rgba(26, 155, 158, 0.12);
-  --accent-orange:  #E8622B;
-  --accent-orange-hover: #F07230;
-  --accent-orange-light: rgba(232, 98, 43, 0.12);
-  --accent-blue:    #2563EB;
-  --accent-yellow:  #F5C842;
-  --accent-yellow-hover: #FFD54F;
+  /* ── Borders ── */
+  --border-light:   #E2E8F0;
+  --border-dark:    rgba(255, 255, 255, 0.08);
 
-  /* ── Glow Effects ── */
-  --glow-teal:      0 0 20px rgba(26, 155, 158, 0.3);
-  --glow-orange:    0 0 20px rgba(232, 98, 43, 0.3);
-  --glow-blue:      0 0 20px rgba(37, 99, 235, 0.2);
+  /* ── Brand Colors & Accents ── */
+  --accent-teal:    #16A3A6; /* Refined teal */
+  --accent-teal-dark: #0F7577;
+  --accent-teal-light: rgba(22, 163, 166, 0.1);
+  
+  --accent-orange:  #F05A28; /* Punchy but corporate orange */
+  --accent-orange-light: rgba(240, 90, 40, 0.1);
 
-  /* ── Text Colors ── */
-  --text-white:     #FFFFFF;
-  --text-light:     #C8D1E0;
-  --text-muted:     #7B8BA8;
-  --text-dark:      #FFFFFF;
-  --text-dark-body: #A0AFC5;
-  --text-dark-muted:#5A6B84;
-  --text-black:     #FFFFFF;
+  --accent-gold:    #F5C842; /* Premium subtle gold/yellow */
+  --accent-gold-hover: #FFD659;
 
-  /* ── Nav ── */
-  --nav-bg:         rgba(10, 14, 39, 0.85);
-  --nav-bg-scroll:  rgba(10, 14, 39, 0.95);
-  --nav-border:     rgba(255, 255, 255, 0.06);
-  --mega-bg:        #0F1535;
-  --mega-shadow:    0 20px 60px rgba(0, 0, 0, 0.5);
+  /* ── Premium Gradients & Glows ── */
+  --glow-teal:      0 8px 30px rgba(22, 163, 166, 0.2);
+  --glow-orange:    0 8px 30px rgba(240, 90, 40, 0.2);
+  --glow-white:     0 8px 30px rgba(255, 255, 255, 0.06);
+  --gradient-brand: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
 
-  /* ── Shadows ── */
-  --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg:      0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-card:    0 1px 4px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 12px 40px rgba(26, 155, 158, 0.15);
+  /* ── Shadows (Multi-layered, realistic) ── */
+  --shadow-sm:      0 2px 4px rgba(0,0,0,0.02), 0 4px 12px rgba(0,0,0,0.02);
+  --shadow-md:      0 4px 6px rgba(0,0,0,0.02), 0 10px 24px rgba(0,0,0,0.04);
+  --shadow-lg:      0 8px 16px rgba(0,0,0,0.03), 0 20px 48px rgba(0,0,0,0.06);
+  --shadow-card:    0 1px 3px rgba(0,0,0,0.02), 0 12px 32px rgba(0,0,0,0.04);
 
-  /* ── Gradients ── */
-  --gradient-hero:  linear-gradient(160deg, #0A0E27 0%, #0F1535 40%, #0A0E27 100%);
-  --gradient-teal:  linear-gradient(135deg, #1A9B9E, #148183);
-  --gradient-orange: linear-gradient(135deg, #E8622B, #D0551F);
-  --gradient-dark:  linear-gradient(180deg, #0A0E27, #060919);
-  --gradient-card:  linear-gradient(135deg, rgba(26, 155, 158, 0.08), rgba(232, 98, 43, 0.04));
-
-  /* ── Typography ── */
-  --font-heading:   'Outfit', 'Avenir', 'Nunito Sans', sans-serif;
-  --font-body:      'Avenir', 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* ── Typography (High-End SaaS specs) ── */
+  --font-heading:   'Outfit', '-apple-system', 'Avenir', sans-serif;
+  --font-body:      'Avenir', 'Nunito Sans', '-apple-system', sans-serif;
   --font-mono:      'JetBrains Mono', monospace;
 
-  /* ── Font Sizes ── */
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-lg:   1.125rem;
-  --text-xl:   1.25rem;
-  --text-2xl:  1.5rem;
-  --text-3xl:  1.875rem;
-  --text-4xl:  2.25rem;
-  --text-5xl:  3rem;
-  --text-6xl:  3.75rem;
-  --text-7xl:  4.5rem;
+  --text-white:     #FFFFFF;
+  --text-primary:   #0B1121;
+  --text-secondary: #475569;
+  --text-tertiary:  #64748B;
+  
+  --text-dark-primary: #F8FAFC;
+  --text-dark-secondary: #94A3B8;
 
-  /* ── Spacing (8px grid) ── */
+  /* ── Font Sizes & Weights ── */
+  --text-xs:   0.75rem; /* 12px */
+  --text-sm:   0.875rem; /* 14px */
+  --text-base: 1.0625rem; /* 17px */
+  --text-lg:   1.25rem; /* 20px */
+  --text-xl:   1.5rem; /* 24px */
+  --text-2xl:  2rem; /* 32px */
+  --text-3xl:  2.5rem; /* 40px */
+  --text-4xl:  3.5rem; /* 56px */
+  --text-5xl:  4.5rem; /* 72px */
+  --text-6xl:  5.5rem; /* 88px */
+
+  --tracking-tight: -0.03em;
+  --tracking-wide:  0.08em;
+
+  /* ── Spacing (8px & 4px system) ── */
   --space-1:  0.25rem;
   --space-2:  0.5rem;
   --space-3:  0.75rem;
   --space-4:  1rem;
-  --space-5:  1.25rem;
   --space-6:  1.5rem;
   --space-8:  2rem;
   --space-10: 2.5rem;
@@ -97,29 +88,31 @@
   --space-24: 6rem;
   --space-32: 8rem;
 
-  /* ── Border Radius ── */
-  --radius-sm:  6px;
-  --radius-md:  10px;
-  --radius-lg:  16px;
-  --radius-xl:  24px;
-  --radius-full: 9999px;
+  /* ── Border Radius (Apple-like Squircles) ── */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-pill: 9999px;
 
-  /* ── Transitions ── */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-  --transition-slow: 400ms ease;
+  /* ── Easing (Fluid & Snappy) ── */
+  --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-snappy);
+  --transition-base: 300ms var(--ease-snappy);
+  --transition-slow: 500ms var(--ease-smooth);
 
-  /* ── Container ── */
-  --container-max: 1280px;
+  /* ── Layout ── */
+  --container-max: 1240px; /* Tighter container for better line lengths */
   --container-padding: var(--space-6);
 }
 
 @media (max-width: 768px) {
   :root {
-    --text-6xl: 2.5rem;
-    --text-5xl: 2rem;
-    --text-4xl: 1.75rem;
-    --text-3xl: 1.5rem;
+    --text-6xl: 3.5rem;
+    --text-5xl: 2.5rem;
+    --text-4xl: 2.25rem;
+    --text-3xl: 1.75rem;
     --container-padding: var(--space-4);
   }
 }

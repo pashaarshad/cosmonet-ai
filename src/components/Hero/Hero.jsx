@@ -1,48 +1,54 @@
-import heroImage from '../../assets/hero-v6.png';
+import heroImage from '../../assets/hero-v7.png';
+import { FiChevronRight } from 'react-icons/fi';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section id="hero" className="hero">
-      {/* Background AI face image */}
+      {/* Premium V7 Background image and overlays */}
       <div className="hero__bg">
-        <img src={heroImage} alt="" className="hero__bg-image" aria-hidden="true" />
-        <div className="hero__bg-overlay"></div>
-        <div className="hero__bg-particles"></div>
+        <img src={heroImage} alt="Premium Abstract Art" className="hero__bg-image" draggable="false" />
+        <div className="hero__bg-vignette"></div>
+        <div className="hero__bg-blur"></div>
       </div>
 
       <div className="hero__content container">
-        <div className="hero__text">
+        <div className="hero__text-center">
+          <div className="hero__badge">
+            <span className="hero__badge-pulse"></span>
+            Cosmonet AI — Engineering the Future
+          </div>
+          
           <h1 className="hero__title">
-            Engineering the Future with AI
+            Intelligent Solutions.<br />
+            <span className="hero__title-gradient">Infinite Possibilities.</span>
           </h1>
-          <p className="hero__subtitle">Your Data — Our Intelligent Technology</p>
+          
+          <p className="hero__subtitle">
+            We architect and deploy enterprise-grade AI, scalable data
+            infrastructure, and breakthrough digital products crafted for the modern age.
+          </p>
+          
           <div className="hero__ctas">
-            <a href="#contact" className="hero__btn-yellow">
-              Let's discuss your project
+            <a href="#contact" className="hero__cta-primary">
+              Start your project
+            </a>
+            <a href="#services" className="hero__cta-secondary">
+              Explore capabilities <FiChevronRight />
             </a>
           </div>
         </div>
       </div>
 
-      {/* News ticker strip */}
-      <div className="hero__ticker">
-        <div className="hero__ticker-nav hero__ticker-nav--left">‹</div>
-        <div className="hero__ticker-inner container">
-          <div className="hero__ticker-item">
-            <span className="hero__ticker-date">MAR 15, 2026</span>
-            <span className="hero__ticker-title">How Generative AI is Redefining Enterprise Software</span>
-          </div>
-          <div className="hero__ticker-item">
-            <span className="hero__ticker-date">MAR 08, 2026</span>
-            <span className="hero__ticker-title">Building Scalable Data Pipelines with AWS</span>
-          </div>
-          <div className="hero__ticker-item">
-            <span className="hero__ticker-date">FEB 28, 2026</span>
-            <span className="hero__ticker-title">The CTO's Guide to Intelligent Automation</span>
-          </div>
+      {/* Clean elegant bottom ticker/trust bar */}
+      <div className="hero__trust">
+        <p className="hero__trust-label">Pioneering AI infrastructure for global innovators</p>
+        <div className="hero__trust-lines">
+          {/* Subtle animated horizontal lines */}
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
         </div>
-        <div className="hero__ticker-nav hero__ticker-nav--right">›</div>
       </div>
     </section>
   );

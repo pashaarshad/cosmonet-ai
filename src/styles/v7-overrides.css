@@ -1,0 +1,44 @@
+/* Override component-level headings so they never depend on missing inline modifiers */
+
+/* About (Light) */
+.about .section-label { color: var(--accent-teal); }
+.about .section-heading { color: var(--text-primary); }
+.about .section-body { color: var(--text-secondary); }
+
+/* Stats (Light) */
+.stats .section-heading { color: var(--text-primary); }
+
+/* Expertise (Light) */
+.expertise .section-heading { color: var(--text-primary); }
+
+/* Services (Dark) */
+.services .section-label { color: var(--accent-teal); }
+.services .section-heading { color: #FFFFFF; }
+.services .section-body { color: rgba(255,255,255,0.7); }
+
+/* Industries (Light) */
+.industries .section-label { color: var(--accent-teal); }
+.industries .section-heading { color: var(--text-primary); }
+
+/* Why Choose (Light/Gray) */
+.why-choose .section-label { color: var(--accent-teal); }
+.why-choose .section-heading { color: var(--text-primary); }
+
+/* Partnership (Light) */
+.partnership .section-label { color: var(--accent-teal); }
+.partnership .section-heading { color: var(--text-primary); }
+.partnership .section-body { color: var(--text-secondary); }
+
+/* Blog (Light) */
+.blog .section-label { color: var(--accent-teal); }
+.blog .section-heading { color: var(--text-primary); }
+
+/* Careers (Light) */
+.careers .section-label { color: var(--accent-teal); }
+.careers .section-heading { color: var(--text-primary); }
+.careers .section-body { color: var(--text-secondary); }
+
+/* Contact (Dark) */
+.contact .section-label { color: var(--accent-teal); }
+.contact .section-heading { color: #FFFFFF; }
+.contact .section-body { color: rgba(255,255,255,0.7); }
