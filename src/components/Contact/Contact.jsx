@@ -19,9 +19,9 @@ export default function Contact() {
     <section id="contact" className="contact section-padding">
       <div className="container">
         <div className="contact__header" data-aos="fade-up">
-          <span className="section-label section-label--light">Get in Touch</span>
+          <span className="section-label section-label--dark">Get in Touch</span>
           <h2 className="contact__main-title">Contact Us</h2>
-          <p className="section-body section-body--light contact__subtitle">
+          <p className="section-body section-body--dark contact__subtitle">
             Ready to transform your business with AI? Let's start a conversation.
           </p>
         </div>

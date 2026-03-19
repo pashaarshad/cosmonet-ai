@@ -1,5 +1,5 @@
 .careers { background: var(--bg-white); }
-.careers__title { font-size: var(--text-4xl); }
+.careers__title { font-size: var(--text-4xl); color: var(--text-dark); }
 .careers__cta { margin-top: var(--space-8); }
 
 .careers__layout {
@@ -21,7 +21,7 @@
   justify-content: space-between;
   padding: var(--space-6);
   background: var(--bg-white);
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid #E2E8F0;
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
 }
@@ -66,6 +66,14 @@
   font-size: var(--text-xs);
   padding: 8px 20px;
   white-space: nowrap;
+  color: var(--text-dark);
+  border-color: #CBD5E1;
+}
+
+.job-card__apply:hover {
+  background: var(--text-dark);
+  color: white;
+  border-color: var(--text-dark);
 }
 
 @media (max-width: 768px) {

@@ -1,27 +1,31 @@
 /* ============================================
-   COSMONET AI — V5 DARK ELEGANCE Design Tokens
+   COSMONET AI — V5 Clean Corporate Theme
+   White / Black / Gray + Brand Accents
    ============================================ */
 
 :root {
   /* ── Primary Backgrounds ── */
-  --bg-dark:        #0A1628;
-  --bg-dark-alt:    #0F1E36;
-  --bg-darkest:     #060D18;
-  --bg-light:       #F5F7FA;
+  --bg-dark:        #0F172A;
+  --bg-dark-alt:    #1E293B;
+  --bg-darkest:     #0B1120;
+  --bg-light:       #F8FAFC;
   --bg-white:       #FFFFFF;
+  --bg-gray:        #F1F5F9;
+  --bg-gray-warm:   #F6F6F6;
 
   /* ── Card Backgrounds ── */
-  --card-dark:      #111D32;
-  --card-dark-hover:#162644;
+  --card-dark:      #1E293B;
+  --card-dark-hover:#273548;
   --card-light:     #FFFFFF;
 
-  /* ── Accent Colors ── */
+  /* ── Brand Accent Colors (from logo) ── */
   --accent-teal:    #1A9B9E;
-  --accent-teal-hover: #15827F;
-  --accent-teal-light: rgba(26, 155, 158, 0.12);
+  --accent-teal-hover: #148183;
+  --accent-teal-light: rgba(26, 155, 158, 0.08);
   --accent-orange:  #E8622B;
   --accent-orange-hover: #D0551F;
-  --accent-orange-light: rgba(232, 98, 43, 0.12);
+  --accent-orange-light: rgba(232, 98, 43, 0.08);
+  --accent-blue:    #2563EB;
 
   /* ── Text Colors ── */
   --text-white:     #FFFFFF;
@@ -30,59 +34,60 @@
   --text-dark:      #0F172A;
   --text-dark-body: #475569;
   --text-dark-muted:#64748B;
+  --text-black:     #000000;
 
   /* ── Nav ── */
-  --nav-bg:         #0A1628;
-  --nav-bg-scroll:  rgba(10, 22, 40, 0.95);
-  --nav-border:     rgba(255, 255, 255, 0.06);
+  --nav-bg:         #FFFFFF;
+  --nav-bg-scroll:  rgba(255, 255, 255, 0.96);
+  --nav-border:     #E2E8F0;
   --mega-bg:        #FFFFFF;
-  --mega-shadow:    0 20px 60px rgba(0, 0, 0, 0.15);
+  --mega-shadow:    0 20px 60px rgba(0, 0, 0, 0.12);
 
   /* ── Shadows ── */
-  --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg:      0 8px 32px rgba(0, 0, 0, 0.12);
-  --shadow-card:    0 2px 12px rgba(0, 0, 0, 0.06);
-  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg:      0 8px 32px rgba(0, 0, 0, 0.1);
+  --shadow-card:    0 1px 4px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
 
   /* ── Gradients ── */
-  --gradient-hero:  linear-gradient(160deg, #0A1628 0%, #0F1E36 50%, #0A1628 100%);
-  --gradient-teal:  linear-gradient(135deg, #1A9B9E, #15827F);
-  --gradient-orange:linear-gradient(135deg, #E8622B, #D0551F);
-  --gradient-dark:  linear-gradient(180deg, #0A1628, #060D18);
+  --gradient-hero:  linear-gradient(160deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+  --gradient-teal:  linear-gradient(135deg, #1A9B9E, #148183);
+  --gradient-orange: linear-gradient(135deg, #E8622B, #D0551F);
+  --gradient-dark:  linear-gradient(180deg, #0F172A, #0B1120);
 
   /* ── Typography ── */
-  --font-heading:   'Outfit', sans-serif;
-  --font-body:      'Inter', sans-serif;
+  --font-heading:   'Outfit', 'Avenir', 'Nunito Sans', sans-serif;
+  --font-body:      'Avenir', 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono:      'JetBrains Mono', monospace;
 
   /* ── Font Sizes ── */
-  --text-xs:   0.75rem;    /* 12px */
-  --text-sm:   0.875rem;   /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg:   1.125rem;   /* 18px */
-  --text-xl:   1.25rem;    /* 20px */
-  --text-2xl:  1.5rem;     /* 24px */
-  --text-3xl:  1.875rem;   /* 30px */
-  --text-4xl:  2.25rem;    /* 36px */
-  --text-5xl:  3rem;       /* 48px */
-  --text-6xl:  3.75rem;    /* 60px */
-  --text-7xl:  4.5rem;     /* 72px */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
 
   /* ── Spacing (8px grid) ── */
-  --space-1:  0.25rem;   /* 4px */
-  --space-2:  0.5rem;    /* 8px */
-  --space-3:  0.75rem;   /* 12px */
-  --space-4:  1rem;      /* 16px */
-  --space-5:  1.25rem;   /* 20px */
-  --space-6:  1.5rem;    /* 24px */
-  --space-8:  2rem;      /* 32px */
-  --space-10: 2.5rem;    /* 40px */
-  --space-12: 3rem;      /* 48px */
-  --space-16: 4rem;      /* 64px */
-  --space-20: 5rem;      /* 80px */
-  --space-24: 6rem;      /* 96px */
-  --space-32: 8rem;      /* 128px */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
 
   /* ── Border Radius ── */
   --radius-sm:  6px;

@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="footer__brand">
             <a href="#hero" className="footer__logo">
-              <img src="/logo.png" alt="Cosmonet AI" className="footer__logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+              <img src="/logo-icon.png" alt="Cosmonet AI" className="footer__logo-icon" />
               <span className="footer__logo-text">COSMONET <span className="footer__logo-accent">AI</span></span>
             </a>
             <p className="footer__desc">

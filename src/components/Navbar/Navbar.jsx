@@ -31,7 +31,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner container">
         <a href="#hero" className="navbar__logo">
-          <img src="/logo.png" alt="Cosmonet AI Logo" className="navbar__logo-img" onError={(e) => { e.target.style.display = 'none'; }} />
+          <img src="/logo-icon.png" alt="Cosmonet AI" className="navbar__logo-icon" />
           <span className="navbar__logo-text">
             COSMONET <span className="navbar__logo-accent">AI</span>
           </span>
