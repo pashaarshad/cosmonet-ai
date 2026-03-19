@@ -1,5 +1,11 @@
-.partnership { background: var(--bg-dark); }
-.partnership__title { font-size: var(--text-4xl); color: var(--text-white); }
+/* Partnership — WHITE section */
+.partnership { background: #FFFFFF; }
+
+.partnership .section-label { color: var(--accent-teal); }
+.partnership .section-label::before { background: var(--accent-teal); }
+.partnership .section-heading { color: #0F172A; }
+.partnership .section-body { color: #475569; }
+
 .partnership__layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,7 +16,7 @@
   font-family: var(--font-heading);
   font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--text-white);
+  color: #0F172A;
   margin-top: var(--space-10);
   margin-bottom: var(--space-5);
 }
@@ -25,7 +31,7 @@
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-base);
-  color: var(--text-light);
+  color: #475569;
 }
 .partnership__check {
   color: var(--accent-teal);
@@ -52,7 +58,6 @@
   height: auto;
   margin: 0 auto;
   display: block;
-  filter: brightness(1.1) saturate(1.2);
 }
 @media (max-width: 768px) {
   .partnership__layout { grid-template-columns: 1fr; }

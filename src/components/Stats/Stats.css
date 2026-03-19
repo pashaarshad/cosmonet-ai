@@ -1,5 +1,7 @@
-.stats { background: var(--bg-light); }
-.stats__title { font-size: var(--text-3xl); color: var(--text-white); }
+/* Stats — DARK section */
+.stats { background: var(--bg-dark); }
+.stats .section-label { color: var(--accent-teal); }
+.stats .section-heading { color: #FFFFFF; }
 .stats__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,7 +9,7 @@
   margin-top: var(--space-12);
 }
 .stat-card {
-  background: var(--card-dark);
+  background: rgba(255,255,255,0.04);
   border-radius: var(--radius-lg);
   padding: var(--space-8) var(--space-6);
   text-align: center;
@@ -30,7 +32,7 @@
 }
 .stat-card__label {
   font-size: var(--text-sm);
-  color: var(--text-dark-body);
+  color: #A0AFC5;
   line-height: 1.5;
 }
 @media (max-width: 768px) {

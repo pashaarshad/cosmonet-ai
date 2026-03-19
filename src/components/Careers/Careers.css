@@ -1,5 +1,11 @@
-.careers { background: var(--bg-dark); }
-.careers__title { font-size: var(--text-4xl); color: var(--text-white); }
+/* Careers — WHITE section */
+.careers { background: #FFFFFF; }
+
+.careers .section-label { color: var(--accent-teal); }
+.careers .section-label::before { background: var(--accent-teal); }
+.careers .section-heading { color: #0F172A; }
+.careers .section-body { color: #475569; }
+
 .careers__cta { margin-top: var(--space-8); }
 .careers__layout {
   display: grid;
@@ -17,20 +23,20 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-6);
-  background: var(--card-dark);
-  border: 1px solid rgba(255,255,255,0.04);
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
 }
 .job-card:hover {
-  box-shadow: var(--glow-teal);
-  border-color: rgba(26, 155, 158, 0.3);
+  box-shadow: 0 4px 16px rgba(26, 155, 158, 0.12);
+  border-color: var(--accent-teal);
 }
 .job-card__title {
   font-family: var(--font-heading);
   font-size: var(--text-base);
   font-weight: 700;
-  color: var(--text-white);
+  color: #0F172A;
   margin-bottom: var(--space-2);
 }
 .job-card__meta {
@@ -43,12 +49,12 @@
   align-items: center;
   gap: var(--space-1);
   font-size: var(--text-xs);
-  color: var(--text-muted);
+  color: #64748B;
 }
 .job-card__type {
   font-size: var(--text-xs);
   color: var(--accent-teal);
-  background: var(--accent-teal-light);
+  background: rgba(26, 155, 158, 0.08);
   padding: 2px 10px;
   border-radius: var(--radius-full);
   font-weight: 500;
@@ -57,15 +63,15 @@
   font-size: var(--text-xs);
   padding: 8px 20px;
   white-space: nowrap;
-  color: var(--text-white);
-  border: 1px solid rgba(255,255,255,0.15);
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
   border-radius: var(--radius-sm);
   background: transparent;
 }
 .job-card__apply:hover {
-  background: var(--accent-teal);
+  background: #0F172A;
   color: white;
-  border-color: var(--accent-teal);
+  border-color: #0F172A;
 }
 @media (max-width: 768px) {
   .careers__layout { grid-template-columns: 1fr; }
