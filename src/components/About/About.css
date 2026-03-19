@@ -1,26 +1,102 @@
-/* ──────────────── ABOUT (V7 Premium Clean) ──────────────── */
+/* ──────────────── ABOUT (V7 Premium Interactive Split) ──────────────── */
 .about {
   background: var(--bg-white);
-  padding: var(--space-32) 0 var(--space-20);
+  padding: var(--space-32) 0;
   border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-20);
+  align-items: center;
 }
 
 .about__title {
   font-family: var(--font-heading);
-  font-size: var(--text-5xl);
-  font-weight: 700;
-  letter-spacing: var(--tracking-tight);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
-  max-width: 900px;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-top: var(--space-4);
 }
 
+.about__title-gradient {
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .about__body {
-  font-size: var(--text-xl);
-  line-height: 1.6;
+  font-size: var(--text-lg);
+  line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 760px;
   margin-top: var(--space-8);
+  margin-bottom: var(--space-10);
   font-weight: 400;
+}
+
+/* Stunning Interactive Right Visual */
+.about__visual { position: relative; }
+.about__image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  background: var(--bg-offwhite);
+  padding: var(--space-8);
+  box-shadow: 0 4px 60px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.about__image {
+  width: 100%; height: auto;
+  border-radius: var(--radius-lg);
+  transform: scale(1);
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  mix-blend-mode: multiply; /* Helps white background perfectly match container */
+}
+
+.about__image-wrapper:hover .about__image {
+  transform: scale(1.05); /* Interactive pop on hover */
+}
+
+/* Floating AI Card for deeper interaction feel */
+.about__floating-card {
+  position: absolute;
+  bottom: -20px;
+  left: -30px;
+  background: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+  animation: floatCard 6s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.about__floating-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-orange));
+  box-shadow: 0 4px 14px rgba(240, 90, 40, 0.3);
+}
+
+.about__floating-text { display: flex; flex-direction: column; }
+.about__floating-text strong { font-family: var(--font-heading); font-size: 15px; color: var(--text-primary); }
+.about__floating-text span { font-size: 13px; color: var(--text-tertiary); }
+
+@media (max-width: 1024px) {
+  .about__layout { grid-template-columns: 1fr; gap: var(--space-16); }
+  .about__floating-card { left: 50%; transform: translateX(-50%) !important; animation: none; bottom: -20px; }
 }
