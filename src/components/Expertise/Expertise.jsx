@@ -6,18 +6,25 @@ export default function Expertise() {
   return (
     <section id="expertise" className="expertise section-padding">
       <div className="container">
+        {/* Banner Section provided by user */}
         <header className="expertise__header">
-          <span className="section-label">Core Technology Stack</span>
-          <h2 className="section-heading section-heading--light">
-            Powering Innovation with a <span className="accent-teal">Future-Ready Core</span>
-          </h2>
+          <span className="section-label">Banner</span>
+          <h1 className="section-heading section-heading--light">
+            Powering Innovation with a <span className="brand-orange-text">Future-Ready Core Tech Stack</span>
+          </h1>
           <p className="section-body section-body--light">
             Build smarter, scale faster, and innovate confidently with our AI-driven technology ecosystem. 
             From Artificial Intelligence Solutions to cloud-native architectures, our stack is engineered 
-            to deliver performance and intelligence at every layer.
+            to deliver performance, flexibility, and intelligence at every layer.
           </p>
+          <div className="expertise__header-cta">
+            <a href="#contact" className="btn btn-primary">
+              Explore Our Capabilities
+            </a>
+          </div>
         </header>
 
+        {/* Technical Ecosystem Cards */}
         <div className="expertise__grid" data-aos="fade-up">
           {expertiseSections.map((section, idx) => (
             <div key={idx} className="expertise__card">

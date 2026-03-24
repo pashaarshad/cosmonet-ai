@@ -112,7 +112,8 @@ input, textarea, select {
   color: var(--text-white);
 }
 
-.section-heading .accent-orange {
+.section-heading .accent-orange,
+.brand-orange-text {
   color: var(--brand-orange);
 }
 

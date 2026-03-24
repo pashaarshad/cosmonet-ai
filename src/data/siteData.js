@@ -106,9 +106,9 @@ export const statsData = [
 ];
 
 export const heroContent = {
-  title: 'Powering Innovation with a Future-Ready Core Tech Stack',
-  subtitle: 'Build smarter, scale faster, and innovate confidently with our AI-driven technology ecosystem. From Artificial Intelligence Solutions to cloud-native architectures, our stack is engineered to deliver performance, flexibility, and intelligence at every layer.',
-  cta: 'Explore Our Capabilities'
+  title: 'Engineering the Future with AI',
+  subtitle: 'Your Data — Our Intelligent Technology',
+  cta: "Let's discuss your project"
 };
 
 export const expertiseSections = [
