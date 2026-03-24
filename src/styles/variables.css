@@ -1,24 +1,24 @@
 /* ============================================
-   COSMONET AI — V6 Dark Futuristic Theme
-   Deep Navy / Teal Glow / Orange Accents
+   COSMONET AI — V8 "Midnight Navy" Theme
+   Andersen-inspired #0D1B2A dark + White + Orange
    ============================================ */
 
 :root {
   /* ── Primary Backgrounds ── */
-  --bg-dark:        #0A0E27;
-  --bg-dark-alt:    #0F1535;
-  --bg-darkest:     #060919;
-  --bg-light:       #0D1230;
-  --bg-white:       #0F1535;
-  --bg-gray:        #111842;
-  --bg-gray-warm:   #141B4A;
+  --bg-dark:        #0D1B2A;   /* ← Andersen midnight navy from screenshot */
+  --bg-dark-alt:    #112234;   /* Slightly lighter shade */
+  --bg-darkest:     #08111B;   /* Deepest shade */
+  --bg-light:       #112234;
+  --bg-white:       #FFFFFF;
+  --bg-gray:        #142740;
+  --bg-gray-warm:   #0F1F30;
 
   /* ── Card Backgrounds ── */
   --card-dark:      rgba(255, 255, 255, 0.04);
   --card-dark-hover:rgba(255, 255, 255, 0.07);
   --card-light:     rgba(255, 255, 255, 0.03);
 
-  /* ── Brand Accent Colors (from logo) ── */
+  /* ── Brand Accent Colors ── */
   --accent-teal:    #1A9B9E;
   --accent-teal-hover: #22B5B8;
   --accent-teal-light: rgba(26, 155, 158, 0.12);
@@ -29,25 +29,36 @@
   --accent-yellow:  #F5C842;
   --accent-yellow-hover: #FFD54F;
 
+  /* V8 Brand Colors */
+  --brand-navy-dark:  #08111B;
+  --brand-navy:       #0D1B2A;
+  --brand-blue:       #1565C0;
+  --brand-blue-glow:  rgba(21, 101, 192, 0.3);
+  --brand-orange:     #F38522;
+  --brand-orange-hover: #E67310;
+  --brand-light-blue: #E8F0FE;
+
   /* ── Glow Effects ── */
   --glow-teal:      0 0 20px rgba(26, 155, 158, 0.3);
-  --glow-orange:    0 0 20px rgba(232, 98, 43, 0.3);
-  --glow-blue:      0 0 20px rgba(37, 99, 235, 0.2);
+  --glow-orange:    0 0 20px rgba(243, 133, 34, 0.3);
+  --glow-blue:      0 0 20px rgba(21, 101, 192, 0.2);
 
   /* ── Text Colors ── */
   --text-white:     #FFFFFF;
-  --text-light:     #C8D1E0;
-  --text-muted:     #7B8BA8;
+  --text-light:     #B8C8D8;
+  --text-muted:     #6B8299;
   --text-dark:      #FFFFFF;
-  --text-dark-body: #A0AFC5;
-  --text-dark-muted:#5A6B84;
+  --text-dark-body: #94A8BC;
+  --text-dark-muted:#4A6178;
   --text-black:     #FFFFFF;
+  --text-secondary: #64748B;
+  --text-primary:   #0D1B2A;
 
   /* ── Nav ── */
-  --nav-bg:         rgba(10, 14, 39, 0.85);
-  --nav-bg-scroll:  rgba(10, 14, 39, 0.95);
+  --nav-bg:         rgba(13, 27, 42, 0.9);
+  --nav-bg-scroll:  rgba(13, 27, 42, 0.97);
   --nav-border:     rgba(255, 255, 255, 0.06);
-  --mega-bg:        #0F1535;
+  --mega-bg:        #112234;
   --mega-shadow:    0 20px 60px rgba(0, 0, 0, 0.5);
 
   /* ── Shadows ── */
@@ -55,14 +66,15 @@
   --shadow-md:      0 4px 16px rgba(0, 0, 0, 0.4);
   --shadow-lg:      0 8px 32px rgba(0, 0, 0, 0.5);
   --shadow-card:    0 1px 4px rgba(0, 0, 0, 0.3);
-  --shadow-card-hover: 0 12px 40px rgba(26, 155, 158, 0.15);
+  --shadow-card-hover: 0 12px 40px rgba(243, 133, 34, 0.12);
 
   /* ── Gradients ── */
-  --gradient-hero:  linear-gradient(160deg, #0A0E27 0%, #0F1535 40%, #0A0E27 100%);
-  --gradient-teal:  linear-gradient(135deg, #1A9B9E, #148183);
-  --gradient-orange: linear-gradient(135deg, #E8622B, #D0551F);
-  --gradient-dark:  linear-gradient(180deg, #0A0E27, #060919);
-  --gradient-card:  linear-gradient(135deg, rgba(26, 155, 158, 0.08), rgba(232, 98, 43, 0.04));
+  --gradient-hero:    linear-gradient(160deg, #0D1B2A 0%, #112234 40%, #0D1B2A 100%);
+  --gradient-brand:   linear-gradient(135deg, #F38522, #E67310);
+  --gradient-blue:    linear-gradient(135deg, #1565C0, #0D47A1);
+  --gradient-orange:  linear-gradient(135deg, #F38522, #E67310);
+  --gradient-dark:    linear-gradient(180deg, #0D1B2A, #08111B);
+  --gradient-card:    linear-gradient(135deg, rgba(243,133,34,0.06), rgba(21,101,192,0.04));
 
   /* ── Typography ── */
   --font-heading:   'Outfit', 'Avenir', 'Nunito Sans', sans-serif;

@@ -4,7 +4,9 @@
 
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background: #FFFFFF;
   border-bottom: 1px solid #E5E7EB;
@@ -52,7 +54,9 @@
 }
 
 /* ── Nav Links ── */
-.navbar__nav { display: flex; }
+.navbar__nav {
+  display: flex;
+}
 
 .navbar__links {
   display: flex;
@@ -73,7 +77,8 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: var(--brand-orange);
   transform: scaleX(0);
@@ -101,7 +106,8 @@
 }
 
 .navbar__link:hover {
-  color: #111827; /* Stay dark — no white on hover */
+  color: #111827;
+  /* Stay dark — no white on hover */
 }
 
 .navbar__chevron {
@@ -152,14 +158,15 @@
   /* Full width bar, but content inside the container */
   position: absolute;
   top: 70px;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   background: #FFFFFF;
   border-top: 1px solid #E5E7EB;
   border-bottom: 3px solid var(--brand-orange);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   z-index: 998;
   animation: megaSlideDown 0.18s ease;
-  
+
   /* Grid lives inside the max-container */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -170,8 +177,15 @@
 }
 
 @keyframes megaSlideDown {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mega-menu__category {
@@ -207,7 +221,8 @@
 }
 
 .mega-menu__link:hover .mega-menu__item-name {
-  color: #111827; /* Keep dark on hover, arrow does the work */
+  color: #111827;
+  /* Keep dark on hover, arrow does the work */
 }
 
 .mega-menu__item-name {
@@ -222,7 +237,8 @@
 
 /* Arrow that appears on hover — slides in from left */
 .mega-menu__item-name::after {
-  content: '\2192'; /* → arrow */
+  content: '\2192';
+  /* → arrow */
   font-size: 14px;
   opacity: 0;
   transform: translateX(-6px);
@@ -260,14 +276,19 @@
   transition: color 0.15s ease;
 }
 
-.mega-menu__view-all:hover { color: var(--brand-orange); }
+.mega-menu__view-all:hover {
+  color: var(--brand-orange);
+}
 
 /* ============================================
    MOBILE MENU
    ============================================ */
 .mobile-menu {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #FFFFFF;
   z-index: 999;
   display: flex;
@@ -280,7 +301,10 @@
   transition: all 0.3s ease;
 }
 
-.mobile-menu--open { opacity: 1; visibility: visible; }
+.mobile-menu--open {
+  opacity: 1;
+  visibility: visible;
+}
 
 .mobile-menu__links {
   display: flex;
@@ -298,13 +322,27 @@
   transition: color 0.2s ease;
 }
 
-.mobile-menu__link:hover { color: var(--brand-orange); }
+.mobile-menu__link:hover {
+  color: var(--brand-orange);
+}
 
-.mobile-menu__cta { margin-top: 16px; }
+.mobile-menu__cta {
+  margin-top: 16px;
+}
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .navbar__nav, .navbar__cta { display: none; }
-  .navbar__hamburger { display: flex; }
-  .mega-menu__inner { display: none !important; }
+
+  .navbar__nav,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .mega-menu__inner {
+    display: none !important;
+  }
 }

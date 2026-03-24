@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background: var(--bg-dark);
+  background: #0D1B2A; /* Andersen midnight navy */
   display: flex;
   flex-direction: column;
   padding-top: 70px;
