@@ -1,25 +1,38 @@
-import { expertiseItems } from '../../data/siteData';
-import { FiCheck } from 'react-icons/fi';
+import { expertiseSections } from '../../data/siteData';
+import { FiCheckCircle } from 'react-icons/fi';
 import './Expertise.css';
 
 export default function Expertise() {
   return (
     <section id="expertise" className="expertise section-padding">
       <div className="container">
-        <span className="section-label">What's Our Expertise</span>
-        <h2 className="section-heading section-heading--light expertise__title" data-aos="fade-up">
-          Core Technology <span className="accent-teal">Stack</span>
-        </h2>
-        <p className="section-body section-body--light" data-aos="fade-up" data-aos-delay="100">
-          From Artificial Intelligence and Machine Learning solutions to cloud-native software development,
-          our team transforms complex ideas into high-performance digital products. We bridge the gap between
-          visionary concepts and production-ready reality through deep technical expertise.
-        </p>
-        <div className="expertise__grid" data-aos="fade-up" data-aos-delay="200">
-          {expertiseItems.map((item, i) => (
-            <div key={i} className="expertise__item">
-              <span className="expertise__icon"><FiCheck /></span>
-              <span className="expertise__text">{item}</span>
+        <header className="expertise__header">
+          <span className="section-label">Core Technology Stack</span>
+          <h2 className="section-heading section-heading--light">
+            Powering Innovation with a <span className="accent-teal">Future-Ready Core</span>
+          </h2>
+          <p className="section-body section-body--light">
+            Build smarter, scale faster, and innovate confidently with our AI-driven technology ecosystem. 
+            From Artificial Intelligence Solutions to cloud-native architectures, our stack is engineered 
+            to deliver performance and intelligence at every layer.
+          </p>
+        </header>
+
+        <div className="expertise__grid" data-aos="fade-up">
+          {expertiseSections.map((section, idx) => (
+            <div key={idx} className="expertise__card">
+              <div className="expertise__card-content">
+                <h3 className="expertise__card-title">{section.title}</h3>
+                <p className="expertise__card-text">{section.content}</p>
+                <ul className="expertise__bullets">
+                  {section.bullets.map((bullet, bIdx) => (
+                    <li key={bIdx} className="expertise__bullet">
+                      <FiCheckCircle className="expertise__bullet-icon" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

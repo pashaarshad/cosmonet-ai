@@ -1,48 +1,120 @@
-/* Expertise — WHITE section */
-.expertise { background: #FFFFFF; }
+/* Expertise Section — WHITE Background with Premium Grid */
+.expertise {
+  background: #FFFFFF;
+  padding: var(--space-20) 0;
+}
 
-.expertise .section-label { color: var(--accent-teal); }
-.expertise .section-label::before { background: var(--accent-teal); }
-.expertise .section-heading { color: #0F172A; }
-.expertise .section-body { color: #475569; }
+.expertise .section-label { 
+  color: var(--brand-orange); 
+}
 
+.expertise .section-label::before { 
+  background: var(--brand-orange); 
+}
+
+.expertise__header {
+  margin-bottom: var(--space-12);
+  max-width: 800px;
+}
+
+.expertise .section-heading { 
+  color: var(--brand-navy); 
+  margin-bottom: var(--space-4);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.expertise .section-body { 
+  color: #4B5563; 
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+/* ── Grid Layout ── */
 .expertise__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-10);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-16);
 }
-.expertise__item {
+
+/* ── Feature Cards ── */
+.expertise__card {
+  position: relative;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-4) var(--space-5);
-  background: #F8FAFC;
-  border-radius: var(--radius-md);
-  border: 1px solid #E2E8F0;
-  transition: all var(--transition-base);
+  flex-direction: column;
 }
-.expertise__item:hover {
+
+.expertise__card:hover {
   background: #FFFFFF;
-  border-color: var(--accent-teal);
-  transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(26, 155, 158, 0.12);
+  border-color: var(--brand-orange);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
 }
-.expertise__icon {
+
+.expertise__card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.expertise__card-text {
+  font-size: var(--text-base);
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+/* ── Bullet Points ── */
+.expertise__bullets {
+  list-style: none;
+  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px; height: 28px;
-  border-radius: 50%;
-  background: rgba(26, 155, 158, 0.1);
-  color: var(--accent-teal);
+  flex-direction: column;
+  gap: 12px;
+}
+
+.expertise__bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   font-size: 14px;
+  color: #4B5563;
+  line-height: 1.4;
+}
+
+.expertise__bullet-icon {
+  color: var(--brand-orange);
+  font-size: 16px;
+  margin-top: 2px;
   flex-shrink: 0;
 }
-.expertise__text {
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: #0F172A;
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .expertise__grid {
+    gap: var(--space-6);
+  }
 }
-@media (max-width: 768px) { .expertise__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .expertise__grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 768px) {
+  .expertise__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .expertise__card {
+    padding: var(--space-6);
+  }
+  
+  .expertise .section-heading {
+    font-size: 2rem;
+  }
+}
