@@ -7,50 +7,29 @@ export const navLinks = [
     megaMenu: {
       categories: [
         {
-          title: 'AI & Data',
+          title: 'AI & Intelligence',
           items: [
-            { name: 'Artificial Intelligence', desc: 'AI services, chatbots, self-assessment tools' },
+            { name: 'Artificial Intelligence', desc: 'AI services, chatbots, intelligent automation' },
             { name: 'Machine Learning', desc: 'Predictive models and training pipelines' },
-            { name: 'Data Engineering', desc: 'Data lakes, warehouses, and pipeline solutions' },
-            { name: 'Generative AI / LLM', desc: 'Large language model development and integration' },
+            { name: 'Generative AI / LLM', desc: 'Large language model development & integration' },
+            { name: 'AI-Powered Analytics', desc: 'Data lakes, warehouses, insight platforms' },
           ],
         },
         {
-          title: 'Application Development',
+          title: 'Engineering & Development',
           items: [
-            { name: 'Web Applications', desc: 'Scalable, responsive web app development' },
-            { name: 'Mobile Apps', desc: 'Cross-platform mobile solutions' },
-            { name: 'SaaS Products', desc: 'End-to-end SaaS product engineering' },
+            { name: 'Web & Mobile Applications', desc: 'Scalable, enterprise-grade app development' },
+            { name: 'Software Engineering', desc: 'API, microservices, full-stack engineering' },
+            { name: 'Cyber Security', desc: 'Threat detection, compliance, pen testing' },
+            { name: 'Digital Transformation', desc: 'Cloud migration & intelligent automation' },
           ],
         },
         {
-          title: 'Cyber Security',
-          items: [
-            { name: 'Threat Defense', desc: 'Advanced threat detection and prevention' },
-            { name: 'Compliance & Audit', desc: 'Security compliance and audit services' },
-            { name: 'Penetration Testing', desc: 'Comprehensive security testing' },
-          ],
-        },
-        {
-          title: 'Digital Transformation',
-          items: [
-            { name: 'Cloud Migration', desc: 'Seamless infrastructure migration' },
-            { name: 'Process Automation', desc: 'Intelligent process optimization' },
-          ],
-        },
-        {
-          title: 'Software Engineering',
-          items: [
-            { name: 'API & Microservices', desc: 'Scalable API architecture design' },
-            { name: 'Full-Stack Development', desc: 'End-to-end application engineering' },
-          ],
-        },
-        {
-          title: 'More Services',
+          title: 'Business & Growth',
           items: [
             { name: 'MVP Services', desc: 'Rapid prototyping and PoC development' },
-            { name: 'Staff Augmentation', desc: 'Hire dedicated engineers and teams' },
-            { name: 'Support Services', desc: 'DevOps, CI/CD, and maintenance' },
+            { name: 'Staff Augmentation', desc: 'Hire dedicated engineers and AI teams' },
+            { name: 'Support Services', desc: 'DevOps, CI/CD, and ongoing maintenance' },
           ],
         },
       ],

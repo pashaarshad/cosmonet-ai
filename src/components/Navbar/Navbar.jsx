@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { navLinks } from '../../data/siteData';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX, FiChevronDown, FiArrowRight } from 'react-icons/fi';
 import { useScrollDirection } from '../../hooks/useAnimations';
 import './Navbar.css';
 
@@ -16,66 +16,42 @@ export default function Navbar() {
   };
 
   const handleMouseLeave = () => {
-    menuTimeout.current = setTimeout(() => setActiveMenu(null), 200);
+    menuTimeout.current = setTimeout(() => setActiveMenu(null), 150);
   };
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
   }, [mobileOpen]);
 
+  const activeLinkData = navLinks.find(l => l.label === activeMenu);
+
   return (
-    <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+    <header
+      className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="navbar__inner container">
+        {/* Logo */}
         <a href="#hero" className="navbar__logo">
-          <img src="/logo-icon.png" alt="Cosmonet AI" className="navbar__logo-icon" />
+          <img src="/logo.png" alt="Cosmonet AI" className="navbar__logo-icon" />
           <span className="navbar__logo-text">
             COSMONET <span className="navbar__logo-accent">AI</span>
           </span>
         </a>
 
+        {/* Desktop Nav */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
           <ul className="navbar__links">
             {navLinks.map((link) => (
               <li
                 key={link.label}
-                className={`navbar__link-item ${link.megaMenu ? 'has-mega' : ''}`}
-                onMouseEnter={() => link.megaMenu && handleMouseEnter(link.label)}
-                onMouseLeave={() => link.megaMenu && handleMouseLeave()}
+                className={`navbar__link-item ${activeMenu === link.label ? 'mega-active' : ''}`}
+                onMouseEnter={() => link.megaMenu ? handleMouseEnter(link.label) : setActiveMenu(null)}
               >
                 <a href={link.href} className="navbar__link">
                   {link.label}
                   {link.megaMenu && <FiChevronDown className="navbar__chevron" />}
                 </a>
-
-                {link.megaMenu && activeMenu === link.label && (
-                  <div
-                    className="mega-menu"
-                    onMouseEnter={() => handleMouseEnter(link.label)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <div className="mega-menu__inner container">
-                      {link.megaMenu.categories.map((cat) => (
-                        <div key={cat.title} className="mega-menu__category">
-                          <h4 className="mega-menu__cat-title">{cat.title}</h4>
-                          <ul className="mega-menu__items">
-                            {cat.items.map((item) => (
-                              <li key={item.name} className="mega-menu__item">
-                                <a href={link.href} className="mega-menu__link">
-                                  <span className="mega-menu__item-name">{item.name}</span>
-                                  <span className="mega-menu__item-desc">{item.desc}</span>
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </li>
             ))}
           </ul>
@@ -92,6 +68,30 @@ export default function Navbar() {
         </button>
       </div>
 
+      {/* ── Mega Menu: Full-width compact panel ── */}
+      {activeMenu && activeLinkData?.megaMenu && (
+        <div
+          className="mega-menu__inner"
+          onMouseEnter={() => handleMouseEnter(activeMenu)}
+        >
+          {activeLinkData.megaMenu.categories.map((cat) => (
+            <div key={cat.title} className="mega-menu__category">
+              <h4 className="mega-menu__cat-title">{cat.title}</h4>
+              <ul className="mega-menu__items">
+                {cat.items.map((item) => (
+                  <li key={item.name}>
+                    <a href={activeLinkData.href} className="mega-menu__link">
+                      <span className="mega-menu__item-name">{item.name}</span>
+                      <span className="mega-menu__item-desc">{item.desc}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Mobile Menu */}
       <div className={`mobile-menu ${mobileOpen ? 'mobile-menu--open' : ''}`}>
         <ul className="mobile-menu__links">
@@ -107,8 +107,8 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="btn btn-secondary mobile-menu__cta" onClick={() => setMobileOpen(false)}>
-          Get Started
+        <a href="#contact" className="btn btn-primary mobile-menu__cta" onClick={() => setMobileOpen(false)}>
+          Contact us
         </a>
       </div>
     </header>
