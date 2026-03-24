@@ -17,20 +17,20 @@
 .hero__bg-image {
   position: absolute;
   top: 0;
-  right: -5%;
-  width: 70%;
+  right: 0;
+  width: 65%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  opacity: 0.85;
+  object-position: right top;
+  opacity: 1; /* Maximum visibility */
 }
 
 .hero__bg-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, var(--bg-dark) 0%, var(--bg-dark) 25%, rgba(10, 14, 39, 0.6) 55%, rgba(10, 14, 39, 0.3) 100%),
-    linear-gradient(180deg, transparent 60%, var(--bg-dark) 100%);
+    linear-gradient(90deg, #0D1B2A 0%, #0D1B2A 20%, rgba(13, 27, 42, 0.6) 50%, rgba(13, 27, 42, 0) 100%),
+    linear-gradient(180deg, transparent 60%, #0D1B2A 100%);
 }
 
 /* Animated particles effect */
