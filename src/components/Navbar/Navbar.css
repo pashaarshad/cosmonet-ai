@@ -13,8 +13,12 @@
   transition: box-shadow 0.3s ease;
 }
 
-.navbar--scrolled {
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+.navbar__link--active {
+  color: #111827 !important;
+}
+
+.navbar__link--active::after {
+  transform: scaleX(1) !important;
 }
 
 .navbar__inner {

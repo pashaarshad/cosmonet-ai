@@ -1,14 +1,25 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { navLinks } from '../../data/siteData';
-import { FiMenu, FiX, FiChevronDown, FiArrowRight } from 'react-icons/fi';
+import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 import { useScrollDirection } from '../../hooks/useAnimations';
 import './Navbar.css';
+
+// Map nav labels to routes for standalone pages
+const pageRoutes = {
+  About: '/about',
+  Careers: '/careers',
+  Blog: '/blog',
+  Contact: '/contact',
+};
 
 export default function Navbar() {
   const scrolled = useScrollDirection();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const menuTimeout = useRef(null);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
 
   const handleMouseEnter = (label) => {
     clearTimeout(menuTimeout.current);
@@ -25,6 +36,28 @@ export default function Navbar() {
 
   const activeLinkData = navLinks.find(l => l.label === activeMenu);
 
+  const renderNavLink = (link) => {
+    if (pageRoutes[link.label]) {
+      return (
+        <Link
+          to={pageRoutes[link.label]}
+          className={`navbar__link ${location.pathname === pageRoutes[link.label] ? 'navbar__link--active' : ''}`}
+          onClick={() => setMobileOpen(false)}
+        >
+          {link.label}
+        </Link>
+      );
+    }
+    // Home section anchor links
+    const href = isHome ? link.href : `/${link.href}`;
+    return (
+      <a href={href} className="navbar__link">
+        {link.label}
+        {link.megaMenu && <FiChevronDown className="navbar__chevron" />}
+      </a>
+    );
+  };
+
   return (
     <header
       className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
@@ -32,12 +65,12 @@ export default function Navbar() {
     >
       <div className="navbar__inner container">
         {/* Logo */}
-        <a href="#hero" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
           <img src="/logo.png" alt="Cosmonet AI" className="navbar__logo-icon" />
           <span className="navbar__logo-text">
             COSMONET <span className="navbar__logo-accent">AI</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="navbar__nav" role="navigation" aria-label="Main navigation">
@@ -48,16 +81,13 @@ export default function Navbar() {
                 className={`navbar__link-item ${activeMenu === link.label ? 'mega-active' : ''}`}
                 onMouseEnter={() => link.megaMenu ? handleMouseEnter(link.label) : setActiveMenu(null)}
               >
-                <a href={link.href} className="navbar__link">
-                  {link.label}
-                  {link.megaMenu && <FiChevronDown className="navbar__chevron" />}
-                </a>
+                {renderNavLink(link)}
               </li>
             ))}
           </ul>
         </nav>
 
-        <a href="#contact" className="navbar__cta">Contact us</a>
+        <Link to="/contact" className="navbar__cta">Contact us</Link>
 
         <button
           className="navbar__hamburger"
@@ -68,7 +98,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* ── Mega Menu: Full-width compact panel ── */}
+      {/* ── Mega Menu ── */}
       {activeMenu && activeLinkData?.megaMenu && (
         <div
           className="mega-menu__inner"
@@ -97,19 +127,29 @@ export default function Navbar() {
         <ul className="mobile-menu__links">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <a
-                href={link.href}
-                className="mobile-menu__link"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
+              {pageRoutes[link.label] ? (
+                <Link
+                  to={pageRoutes[link.label]}
+                  className="mobile-menu__link"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  href={isHome ? link.href : `/${link.href}`}
+                  className="mobile-menu__link"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>
-        <a href="#contact" className="btn btn-primary mobile-menu__cta" onClick={() => setMobileOpen(false)}>
+        <Link to="/contact" className="btn btn-primary mobile-menu__cta" onClick={() => setMobileOpen(false)}>
           Contact us
-        </a>
+        </Link>
       </div>
     </header>
   );

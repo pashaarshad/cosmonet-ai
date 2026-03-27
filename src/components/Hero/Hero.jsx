@@ -1,12 +1,18 @@
+import { heroContent } from '../../data/siteData';
 import heroImage from '../../assets/hero-v6.png';
 import './Hero.css';
 
 export default function Hero() {
   return (
     <section id="hero" className="hero">
-      {/* Background AI face image */}
+      {/* Background AI Face Image — correctly loaded */}
       <div className="hero__bg">
-        <img src={heroImage} alt="" className="hero__bg-image" aria-hidden="true" />
+        <img 
+          src={heroImage} 
+          alt="" 
+          className="hero__bg-image" 
+          aria-hidden="true"
+        />
         <div className="hero__bg-overlay"></div>
         <div className="hero__bg-particles"></div>
       </div>
@@ -14,21 +20,23 @@ export default function Hero() {
       <div className="hero__content container">
         <div className="hero__text">
           <h1 className="hero__title">
-            Engineering the Future with AI
+            {heroContent.title}
           </h1>
-          <p className="hero__subtitle">Your Data — Our Intelligent Technology</p>
+          <p className="hero__subtitle">
+            {heroContent.subtitle}
+          </p>
           <div className="hero__ctas">
             <a href="#contact" className="hero__btn-yellow">
-              Let's discuss your project
+              {heroContent.cta}
             </a>
           </div>
         </div>
       </div>
 
-      {/* News ticker strip */}
+      {/* News ticker */}
       <div className="hero__ticker">
         <div className="hero__ticker-nav hero__ticker-nav--left">‹</div>
-        <div className="hero__ticker-inner container">
+        <div className="hero__ticker-inner">
           <div className="hero__ticker-item">
             <span className="hero__ticker-date">MAR 15, 2026</span>
             <span className="hero__ticker-title">How Generative AI is Redefining Enterprise Software</span>
