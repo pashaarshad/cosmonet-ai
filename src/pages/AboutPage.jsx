@@ -150,6 +150,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── GLOBAL IMPACT ── */}
+        {false && (
         <section className="about-section about-section--white">
           <div className="container">
             <span className="section-label">Our Global Impact</span>
@@ -168,8 +169,10 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* ── TEAM ── */}
+        {false && (
         <section className="about-section about-section--dark">
           <div className="container">
             <span className="section-label about-section-label--light">Team at Work</span>
@@ -188,6 +191,7 @@ export default function AboutPage() {
             <p className="about-team__note">Interested in featuring your team? Share photos and designations with us to showcase your leadership here, including LinkedIn profiles for enhanced SEO impact.</p>
           </div>
         </section>
+        )}
 
         {/* ── HOW WE WORK ── */}
         <section className="about-section about-section--white">

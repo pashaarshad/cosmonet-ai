@@ -200,7 +200,8 @@ input, textarea, select {
 .scroll-top-btn {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -223,7 +224,7 @@ input, textarea, select {
 }
 
 .scroll-top-btn:hover {
-  transform: translateY(-3px);
+  transform: translateX(-50%) translateY(-3px);
   box-shadow: 0 0 30px rgba(26, 155, 158, 0.5);
 }
 
