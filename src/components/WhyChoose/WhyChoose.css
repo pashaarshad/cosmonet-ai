@@ -53,4 +53,11 @@
   color: #A0AFC5;
   line-height: 1.65;
 }
+@media (min-width: 769px) { 
+  .why-choose__grid .why-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - var(--space-6) / 2);
+    justify-self: center;
+  }
+}
 @media (max-width: 768px) { .why-choose__grid { grid-template-columns: 1fr; } }
