@@ -156,7 +156,7 @@ input, textarea, select {
 .btn-primary:hover {
   background: var(--brand-orange-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(243, 133, 34, 0.35);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
 }
 
 .btn-secondary {
@@ -225,7 +225,7 @@ input, textarea, select {
 
 .scroll-top-btn:hover {
   transform: translateX(-50%) translateY(-3px);
-  box-shadow: 0 0 30px rgba(26, 155, 158, 0.5);
+  box-shadow: 0 8px 25px rgba(0, 98, 255, 0.3);
 }
 
 /* ── AOS Override ── */

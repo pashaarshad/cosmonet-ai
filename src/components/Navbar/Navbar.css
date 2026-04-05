@@ -143,7 +143,7 @@
 
 .navbar__cta:hover {
   background: var(--brand-orange-hover);
-  box-shadow: 0 4px 12px rgba(243, 133, 34, 0.35);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
 }
 
 /* ── Hamburger ── */
