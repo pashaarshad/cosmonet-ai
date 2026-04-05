@@ -4,14 +4,14 @@
    ============================================ */
 
 :root {
-  /* ── Primary Backgrounds ── */
-  --bg-dark:        #0D1B2A;   /* ← Andersen midnight navy from screenshot */
-  --bg-dark-alt:    #112234;   /* Slightly lighter shade */
-  --bg-darkest:     #08111B;   /* Deepest shade */
-  --bg-light:       #112234;
+  /* ── Primary Backgrounds (Obsidian & Steel) ── */
+  --bg-dark:        #0A0D14;   /* Deep charcoal obsidian */
+  --bg-dark-alt:    #121721;   /* Steel grey */
+  --bg-darkest:     #05060A;   /* Purest dark */
+  --bg-light:       #121721;
   --bg-white:       #FFFFFF;
-  --bg-gray:        #142740;
-  --bg-gray-warm:   #0F1F30;
+  --bg-gray:        #1B222E;
+  --bg-gray-warm:   #141924;
 
   /* ── Card Backgrounds ── */
   --card-dark:      rgba(255, 255, 255, 0.04);
@@ -19,29 +19,29 @@
   --card-light:     rgba(255, 255, 255, 0.03);
 
   /* ── Brand Accent Colors ── */
-  --accent-teal:    #1A9B9E;
-  --accent-teal-hover: #22B5B8;
-  --accent-teal-light: rgba(26, 155, 158, 0.12);
-  --accent-orange:  #E8622B;
-  --accent-orange-hover: #F07230;
-  --accent-orange-light: rgba(232, 98, 43, 0.12);
-  --accent-blue:    #2563EB;
-  --accent-yellow:  #F5C842;
-  --accent-yellow-hover: #FFD54F;
+  --accent-teal:    #0062FF; 
+  --accent-teal-hover: #3385FF;
+  --accent-teal-light: rgba(0, 98, 255, 0.08);
+  --accent-orange:  #D4AF37; 
+  --accent-orange-hover: #E5C361;
+  --accent-orange-light: rgba(212, 175, 55, 0.1);
+  --accent-blue:    #3B82F6;
+  --accent-yellow:  #D4AF37;
+  --accent-yellow-hover: #E5C361;
 
-  /* V8 Brand Colors */
-  --brand-navy-dark:  #08111B;
-  --brand-navy:       #0D1B2A;
-  --brand-blue:       #1565C0;
-  --brand-blue-glow:  rgba(21, 101, 192, 0.3);
-  --brand-orange:     #F38522;
-  --brand-orange-hover: #E67310;
-  --brand-light-blue: #E8F0FE;
+  /* Professional Brand Colors */
+  --brand-navy-dark:  #05060A;
+  --brand-navy:       #0A0D14;
+  --brand-blue:       #0052D4;
+  --brand-blue-glow:  rgba(0, 82, 212, 0.1);
+  --brand-orange:     #D4AF37;
+  --brand-orange-hover: #C5A039;
+  --brand-light-blue: #F0F4FF;
 
-  /* ── Glow Effects ── */
-  --glow-teal:      0 0 20px rgba(26, 155, 158, 0.3);
-  --glow-orange:    0 0 20px rgba(243, 133, 34, 0.3);
-  --glow-blue:      0 0 20px rgba(21, 101, 192, 0.2);
+  /* ── Subtle Shadows (Professional Weight) ── */
+  --glow-teal:      0 8px 16px rgba(0, 98, 255, 0.15);
+  --glow-orange:    0 8px 16px rgba(212, 175, 55, 0.15);
+  --glow-blue:      0 8px 16px rgba(0, 82, 212, 0.12);
 
   /* ── Text Colors ── */
   --text-white:     #FFFFFF;

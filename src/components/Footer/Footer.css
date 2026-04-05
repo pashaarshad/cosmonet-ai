@@ -42,11 +42,27 @@
   font-size: 1rem;
   transition: all var(--transition-fast);
 }
-.footer__social:hover {
-  border-color: var(--accent-teal);
-  color: var(--accent-teal);
-  background: var(--accent-teal-light);
-  box-shadow: var(--glow-teal);
+.footer__social[aria-label="LinkedIn"]:hover {
+  border-color: #0077B5;
+  color: #0077B5;
+  background: rgba(0, 119, 181, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.15);
+}
+.footer__social[aria-label="Twitter"]:hover {
+  border-color: #1DA1F2;
+  color: #1DA1F2;
+  background: rgba(29, 161, 242, 0.1);
+}
+.footer__social[aria-label="YouTube"]:hover {
+  border-color: #FF0000;
+  color: #FF0000;
+  background: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15);
+}
+.footer__social[aria-label="GitHub"]:hover {
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
 }
 .footer__col-title {
   font-family: var(--font-heading);
